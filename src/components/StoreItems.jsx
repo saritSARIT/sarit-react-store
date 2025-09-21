@@ -6,14 +6,10 @@ export default function StoreItems() {
    
     useEffect(() => {
         const fetchData = async () => {
-            try{
-                const products = await GetProducts();
-                setMyData(products);
-            }
-            catch(error){
-                console.log(error, "שגיאה בשליפת הנתונים");
-            }
+            const products = await GetProducts();
+            setMyData(products);
         };
+
 
         fetchData();
     },[])
