@@ -1,4 +1,5 @@
-export default function GetProducts() {
-    const data = [{ title: "Product 1" }];
+export default async function GetProducts() {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
     return data;
 }
